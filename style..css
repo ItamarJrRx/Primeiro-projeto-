@@ -78,11 +78,17 @@ body * {
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.2s;
 }
 .light #Switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
 }
+#Switch button:hover{
+outline:8px solid var(--border-hover)
+
+}
+
 
 #Switch span {
   display: block;
@@ -164,5 +170,23 @@ footer {
   }
   .light {
     --img-fundo: url(./Meuassets/img.claro.avif);
+  }
+}
+/*animation*/
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
