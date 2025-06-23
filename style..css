@@ -156,3 +156,13 @@ footer {
   text-align: center;
   font-size: 18px;
 }
+
+/*media queries */
+@media (min-wdth: 800px) {
+  :root {
+    --img-fundo: url(./Meuassets/img.black.jpg);
+  }
+  .light {
+    --img-fundo: url(./Meuassets/img.claro.avif);
+  }
+}
